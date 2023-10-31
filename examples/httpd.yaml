@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: httpd
+  name: httpd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 150m
+          limits:
+            memory: 1200Mi
+            cpu: 1500m 
