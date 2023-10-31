@@ -15,6 +15,13 @@ spec:
       containers:
       - name: httpd
         image: anuddeeph/apache-webserver-php
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 150m
+          limits:
+            memory: 1200Mi
+            cpu: 1500m
         volumeMounts:
         - name: my-volume1
           mountPath: /data1
