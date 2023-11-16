@@ -27,7 +27,7 @@ spec:
             - "--policy-config-file"
             - "/policy-dir/policy.yaml"
             - "--descheduling-interval"
-            - "1m"
+            - "30s" #m -> min ex: 1m, s -> sec ex: 30s
             - "--v"
             - "5"
           ports:
